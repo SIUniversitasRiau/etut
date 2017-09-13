@@ -1,0 +1,26 @@
+{
+    "name": "com.ur.k13",
+    "version": "1.0.0",
+    "displayName": "E-Tutorial Kurikulum 2013",
+    "cordova": {
+        "platforms": [
+            "browser"
+        ],
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-document-viewer": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-file-transfer": {}
+        }
+    },
+    "dependencies": {
+        "cordova-browser": "~4.1.0",
+        "cordova-plugin-console": "~1.0.1",
+        "cordova-plugin-document-viewer": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+        "cordova-plugin-file": "^4.0.0",
+        "cordova-plugin-file-transfer": "^1.6.3",
+        "cordova-plugin-statusbar": "~2.2.3",
+        "cordova-plugin-whitelist": "~1.2.0"
+    }
+}

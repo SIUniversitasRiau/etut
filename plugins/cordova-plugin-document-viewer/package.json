@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+        "spec": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:sitewaerts/cordova-plugin-document-viewer.git",
+          "sshUrl": "git+ssh://git@github.com/sitewaerts/cordova-plugin-document-viewer.git",
+          "httpsUrl": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+          "gitUrl": "git://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+          "shortcut": "github:sitewaerts/cordova-plugin-document-viewer",
+          "directUrl": "https://raw.githubusercontent.com/sitewaerts/cordova-plugin-document-viewer/master/package.json"
+        }
+      },
+      "D:\\02. PENELITIAN\\2017\\android\\E-tutorial\\E-Tutorial Kurikulum 2013\\node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+  "_id": "cordova-plugin-document-viewer@0.9.5",
+  "_inCache": true,
+  "_location": "/cordova-plugin-document-viewer",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+    "spec": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:sitewaerts/cordova-plugin-document-viewer.git",
+      "sshUrl": "git+ssh://git@github.com/sitewaerts/cordova-plugin-document-viewer.git",
+      "httpsUrl": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+      "gitUrl": "git://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+      "shortcut": "github:sitewaerts/cordova-plugin-document-viewer",
+      "directUrl": "https://raw.githubusercontent.com/sitewaerts/cordova-plugin-document-viewer/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git#9e37159ef71fb371c02c160fb8677a21b9bd0fd8",
+  "_shasum": "9a2463f6094d83c15bbd41fea2c82eff5aca8244",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/sitewaerts/cordova-plugin-document-viewer.git",
+  "_where": "D:\\02. PENELITIAN\\2017\\android\\E-tutorial\\E-Tutorial Kurikulum 2013\\node_modules",
+  "author": {
+    "name": "Felix Schauerte"
+  },
+  "bugs": {
+    "url": "https://github.com/sitewaerts/cordova-plugin-document-viewer/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-document-viewer",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "dependencies": {},
+  "description": "PDF Document viewer cordova plugin for iOS, Android and Windows 8.1 + 10.",
+  "devDependencies": {},
+  "engines": {
+    "cordovaDependencies": {
+      "0.9.5": {
+        "cordova": ">=3.7.0",
+        "cordova-windows": ">=4.4.0"
+      }
+    }
+  },
+  "gitHead": "9e37159ef71fb371c02c160fb8677a21b9bd0fd8",
+  "homepage": "https://github.com/sitewaerts/cordova-plugin-document-viewer#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows",
+    "pdf"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-document-viewer",
+  "optionalDependencies": {},
+  "readme": "Cordova Document Viewer Plugin\r\n============================\r\n\r\nA common requirement when developing a cordova based app is to embed a\r\nperformant and secure inline viewer for pdf files which doesn't allow the user\r\nto extract a copy of the pdf file out of the apps sandbox.\r\n\r\nSimple delegation to commonly available viewer apps like Acrobat Reader or\r\nMuPDF is no proper solution, as the app looses control over the pdf file in this case.\r\nThe external viewer app may or may not provide features to send the document\r\nvia email or save it to the devices disk, which is not acceptable.\r\n\r\nThis plugin offers a slim API to view PDF files which are either stored in the\r\napps assets folder (/www/*) or in any other file system directory\r\navailable via the cordova file plugin\r\n(e.g. cordova.file.applicationDirectory, cordova.file.dataDirectory).\r\n\r\nOnline files reachable via http(s) are not supported. Download them to a temp\r\nfolder before starting the viewer. You may use the ```onClose``` callback\r\nto cleanup the temp dir when the viewer is closed.\r\n\r\nViewer features like \"Save as\" or \"Send via EMail\" are configurable at runtime.\r\n\r\nLabels for buttons (i18n) are configurable at runtime.\r\n\r\n### Plugin's Purpose\r\nThe purpose of the plugin is to create an platform independent javascript\r\ninterface for [Cordova][cordova] based mobile applications to view different\r\ndocument types by using native viewer components.\r\n\r\n## Overview\r\n1. [Supported Platforms](#supported-platforms)\r\n2. [Installation](#installation)\r\n3. [Using the plugin](#using-the-plugin)\r\n4. [Known issues](#known-issues)\r\n\r\n## Supported Platforms ##\r\n\r\n* Cordova/Phonegap >=4.4.0\r\n  * iOS 7+\r\n  * Android 4.1+\r\n  * Windows 8.1\r\n  * Windows 10\r\n\r\n## Installation ##\r\n\r\nThe plugin can either be installed from git repository, from local file system\r\nthrough the [Command-line Interface][CLI],\r\nor cloud based through [PhoneGap Build][PGB].\r\n\r\nThe plugin is published at the [npm plugin registry][CDV_plugin].\r\n\r\nAn [ionic native wrapper][ionic] for the plugin is available.\r\n\r\n### Local development environment\r\nFrom master:\r\n```bash\r\n# ~~ from master branch ~~\r\ncordova plugin add https://github.com/sitewaerts/cordova-plugin-document-viewer.git\r\n```\r\nfrom a local folder:\r\n```bash\r\n# ~~ local folder ~~\r\ncordova plugin add cordova-plugin-document-viewer --searchpath path/to/plugin\r\n```\r\nor to use the last stable version:\r\n```bash\r\n# ~~ stable version ~~\r\ncordova plugin add cordova-plugin-document-viewer\r\n```\r\nor to use a specific version:\r\n```bash\r\n# ~~ stable version ~~\r\ncordova plugin add cordova-plugin-document-viewer@[VERSION]\r\n```\r\n\r\nYou may replace cordova with phonegap regarding to your needs.\r\n\r\n### PhoneGap Build\r\nAdd the following xml to your config.xml to always use the latest version of this plugin:\r\n```xml\r\n<gap:plugin name=\"cordova-plugin-document-viewer\" />\r\n```\r\nor a specific version:\r\n```xml\r\n<gap:plugin name=\"cordova-plugin-document-viewer\" version=\"[VERSION]\"/>\r\n```\r\nFor available versions and additional information visit the [npm plugin registry][CDV_plugin].\r\n\r\n\r\n## Using the plugin ##\r\n\r\nSee https://github.com/sitewaerts/cordova-plugin-document-viewer-sample-app for a working example.\r\n\r\nThe plugin creates the object ```cordova.plugins.SitewaertsDocumentViewer```.\r\n\r\n### Plugin initialization\r\nThe plugin and its methods are not available before the *deviceready* event has been fired.\r\n\r\n```javascript\r\ndocument.addEventListener('deviceready', function () {\r\n    // cordova.plugins.SitewaertsDocumentViewer is now available\r\n}, false);\r\n```\r\n\r\n### Common Arguments ###\r\n\r\n#### url ####\r\nString pointing to a device local file (e.g. 'file:///...')\r\n\r\n#### mimeType ####\r\nString representing the mime type of the file. Currently only 'application/pdf' is supported.\r\n\r\n#### options ####\r\nSome optional features like search or bookmarks are not (yet) implemented on every platform! \r\n```js\r\nvar options = {\r\n\ttitle: STRING,\r\n\tdocumentView : {\r\n\t\tcloseLabel : STRING\r\n\t},\r\n\tnavigationView : {\r\n\t\tcloseLabel : STRING\r\n\t},\r\n\temail : {\r\n\t\tenabled : BOOLEAN\r\n\t},\r\n\tprint : {\r\n\t\tenabled : BOOLEAN\r\n\t},\r\n\topenWith : {\r\n\t\tenabled : BOOLEAN\r\n\t},\r\n\tbookmarks : {\r\n\t\tenabled : BOOLEAN\r\n\t},\r\n\tsearch : {\r\n\t\tenabled : BOOLEAN\r\n\t},\r\n\tautoClose: {\r\n\t\tonPause : BOOLEAN\r\n\t}\r\n}\r\n```\r\n\r\n### Check if a Document File could be shown ###\r\n```js\r\ncordova.plugins.SitewaertsDocumentViewer.canViewDocument(\r\n    url, contentType, options, onPossible, onMissingApp, onImpossible, onError);\r\n```\r\n\r\n#### onPossible ####\r\n```js\r\nfunction onPossible(){\r\n  window.console.log('document can be shown');\r\n  //e.g. track document usage\r\n}\r\n```\r\n\r\n#### onMissingApp ####\r\n```js\r\nfunction onMissingApp(appId, installer)\r\n{\r\n    if(confirm(\"Do you want to install the free PDF Viewer App \"\r\n            + appId + \" for Android?\"))\r\n    {\r\n        installer();\r\n    }\r\n}\r\n```\r\n\r\n#### onImpossible ####\r\n```js\r\nfunction onImpossible(){\r\n  window.console.log('document cannot be shown');\r\n  //e.g. track document usage\r\n}\r\n```\r\n\r\n#### onError ####\r\n```js\r\nfunction onError(error){\r\n  window.console.log(error);\r\n  alert(\"Sorry! Cannot show document.\");\r\n}\r\n```\r\n\r\n\r\n### Open a Document File ###\r\n```js\r\ncordova.plugins.SitewaertsDocumentViewer.viewDocument(\r\n    url, mimeType, options, onShow, onClose, onMissingApp, onError, linkHandlers);\r\n```\r\n\r\n#### onShow ####\r\n```js\r\nfunction onShow(){\r\n  window.console.log('document shown');\r\n  //e.g. track document usage\r\n}\r\n```\r\n#### onClose ####\r\n```js\r\nfunction onClose(){\r\n  window.console.log('document closed');\r\n  //e.g. remove temp files\r\n}\r\n```\r\n#### onMissingApp ####\r\n```js\r\nfunction onMissingApp(appId, installer)\r\n{\r\n    if(confirm(\"Do you want to install the free PDF Viewer App \"\r\n            + appId + \" for Android?\"))\r\n    {\r\n        installer();\r\n    }\r\n} \r\n```\r\n#### onError ####\r\n```js\r\nfunction onError(error){\r\n  window.console.log(error);\r\n  alert(\"Sorry! Cannot view document.\");\r\n}\r\n```\r\n#### linkHandlers ####\r\nCurrently only supported on iOS! \r\n\r\nArray of link handlers. Optional. \r\n\r\nLinks in the pdf (when clicked by the user) are delegated to the first linkHandler with a matching pattern. \r\nIf no matching pattern is found, the link is handled with the default link handler of the native viewer component (if any).  \r\n\r\n```js\r\nvar linkHandlers = [\r\n            {\r\n                pattern: STRING, // string representation of a plain regexp (no flags)\r\n                close: BOOLEAN, // shall the document be closed, after the link handler was executed?\r\n                handler: function (link) {} // link handler to be executed when the user clicks on a link matching the pattern\r\n            },\r\n            {\r\n                pattern: '^\\/',\r\n                close: false,\r\n                handler: function (link) {\r\n                    window.console.log('link clicked: ' + link);\r\n                }\r\n            }\r\n    ];\r\n```\r\n\r\n### Close the viewer ###\r\n```js\r\ncordova.plugins.SitewaertsDocumentViewer.closeDocument(onClose, onError);\r\n```\r\n\r\n#### onShow ####\r\n```js\r\nfunction onClose(url){\r\n    if(url)\r\n        window.console.log('closed viewer document ' + url);\r\n    else\r\n        window.console.log('viewer not open');\r\n}\r\n```\r\n#### onError ####\r\n```js\r\nfunction onError(error){\r\n  window.console.log(error);\r\n  alert(\"Sorry! Cannot close viewer.\");\r\n}\r\n```\r\n\r\n## iOS ##\r\n\r\nThe plugin uses the awesome VFRReader (https://github.com/vfr/Reader) to embed pdf viewer functionality in the app.\r\n\r\nTo open a pdf at a given page number add { page: pageIndex } to the options when calling viewDocument. \r\n\r\n### Screenshots ###\r\n\r\n![screenshot](doc/ios/screenshot01.png) &nbsp;&nbsp; ![screenshot](doc/ios/screenshot02.png)\r\n\r\n![screenshot](doc/ios/screenshot03.png) &nbsp;&nbsp; ![screenshot](doc/ios/screenshot04.png)\r\n\r\n\r\n## Android ##\r\n\r\nDue to license restrictions in muPDF, the plugin dispatches to a separate\r\n(free) viewer app based on muPDF. If the viewer app is not yet installed, the user may be \r\nredirected to the google play app store.\r\n \r\n  https://play.google.com/store/apps/details?id=de.sitewaerts.cleverdox.viewer\r\n\r\n  https://github.com/sitewaerts/android-document-viewer\r\n \r\n### Screenshots ###\r\n\r\n![screenshot](doc/android/screenshot01.png) &nbsp;&nbsp; ![screenshot](doc/android/screenshot02.png)\r\n\r\n\r\n## Windows ##\r\n\r\nThe plugin uses \r\n- [Windows.Data.Pdf.PdfDocument][Windows.Data.Pdf.PdfDocument] to generate images for PDF pages\r\n- [pdf.js][PDFJS] to display outline / table of contents\r\n\r\n### Screenshots ###\r\n\r\nTODO\r\n\r\n## Known issues ##\r\n- Add transparent support for online files.\r\n- The external Viewer App (Android) cannot access files stored in app private directories. Due to this fact, the plugin copies a file to a shared temp folder before starting the viewer. When the viewer is closed, the temp file is immediately deleted. While the viewer is running, a sophisticated user may 'steal' the file from the shared temp directory. We are still searching for a better solution, any good idea is welcome.\r\n- Add support for pdf forms.\r\n- Add fulltext search features.\r\n- Add user bookmark support.\r\n- Add support for additional mime types like dwg, docx, etc.\r\n- Optimize user experience for small screens. Currently the viewer components are tested and optimized on tablets only.\r\n- Let developers provide graphics for buttons at runtime.\r\n\r\n\r\n## Credits ##\r\n\r\nbased on https://github.com/vfr/Reader\r\n\r\nbased on https://github.com/mindstorm/CDVPDFViewer\r\n\r\nbased on [pdf.js][PDFJS]\r\n\r\nbased on [winjs][winjs]\r\n\r\ninspired by https://github.com/pebois/phonegap-plugin-PDFViewer\r\n\r\ninspired by https://msdn.microsoft.com/en-us/library/windows/apps/dn263105.aspx\r\n\r\n\r\n[cordova]: https://cordova.apache.org\r\n[CLI]: http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface\r\n[PGB]: http://docs.build.phonegap.com/en_US/index.html\r\n[CDV_plugin]: https://www.npmjs.com/package/cordova-plugin-document-viewer\r\n[PDFJS]: https://mozilla.github.io/pdf.js/\r\n[Windows.Data.Pdf.PdfDocument]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.pdf.pdfdocument\r\n[winjs]: http://try.buildwinjs.com/\r\n[ionic]: https://github.com/driftyco/ionic-native/tree/master/src/@ionic-native/plugins/document-viewer\r\n\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git"
+  },
+  "version": "0.9.5"
+}
