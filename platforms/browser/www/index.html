@@ -15,7 +15,18 @@
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    
+         <style>
+      @media screen and (orientation: portrait)
+      {
+          #home { background-image:url(images/landscape.png); background-size: 100% 100%; }
+      }
+      @media screen and (orientation: landscape)
+      {
+          #home { background-image:url('images/portrait.png') background-size: 100% 100%;; 
+             
+              }
+      }
+    </style>                                                                                                                  
   </head>
   <body id="mobile_wrap">
 
@@ -75,10 +86,8 @@
           <div data-page="index" class="page no-navbar" id="home">
             <!-- Scrollable page content-->
             <div class="page-content">
-                <div id="cover"></div>
                 <div class="content">
-                    <a href="#" id="logo"><img src="images/logo.png" width="100%" alt="Logo"></a>
-                  </div>
+                 </div>
               </div>
             </div>
           </div>
