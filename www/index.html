@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -16,15 +17,13 @@
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
          <style>
-      @media screen and (orientation: portrait)
+     
+     #home { background-image:url(images/portrait.png); background-size: 100% 100%; }
+     @media (max-width: 1400px) 
       {
-          #home { background-image:url(images/landscape.png); background-size: 100% 100%; }
-      }
-      @media screen and (orientation: landscape)
-      {
-          #home { background-image:url('images/portrait.png') background-size: 100% 100%;; 
+          #home { background-image:url('images/landscape.png') background-size: 100% 100%;; 
              
-              }
+      }
       }
     </style>                                                                                                                  
   </head>
@@ -127,10 +126,23 @@
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
     <script>
-      document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(FileTransfer);
+function doOnOrientationChange() {
+    switch(window.orientation) {  
+      case -90 || 90:
+        //alert('landscape');
+        $('#home').css("background-image", "url(images/landscape.png)"); 
+        break; 
+      default:
+       // alert('portrait');
+        $('#home').css("background-image", "url(images/portrait.png)"); 
+        break; 
+    }
 }
+  
+window.addEventListener('orientationchange', doOnOrientationChange);
+  
+// Initial execution if needed
+doOnOrientationChange();
 
     </script>
 

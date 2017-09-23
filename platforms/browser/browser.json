@@ -21,12 +21,6 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ur.k13"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.ur.k13"
-        },
-        "cordova-plugin-file-opener2": {
-            "PACKAGE_NAME": "com.ur.k13"
         }
     },
     "dependent_plugins": {},
@@ -226,38 +220,6 @@
             "merges": [
                 "window.FileSystem"
             ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-            "id": "cordova-plugin-file-transfer.FileTransferError",
-            "pluginId": "cordova-plugin-file-transfer",
-            "clobbers": [
-                "window.FileTransferError"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-            "id": "cordova-plugin-file-transfer.FileTransfer",
-            "pluginId": "cordova-plugin-file-transfer",
-            "clobbers": [
-                "window.FileTransfer"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file-transfer/www/browser/FileTransfer.js",
-            "id": "cordova-plugin-file-transfer.BrowserFileTransfer",
-            "pluginId": "cordova-plugin-file-transfer",
-            "clobbers": [
-                "window.FileTransfer"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
-            "id": "cordova-plugin-file-opener2.FileOpener2",
-            "pluginId": "cordova-plugin-file-opener2",
-            "clobbers": [
-                "cordova.plugins.fileOpener2"
-            ]
         }
     ],
     "plugin_metadata": {
@@ -265,8 +227,6 @@
         "cordova-plugin-document-viewer": "0.9.5",
         "cordova-plugin-statusbar": "2.2.3",
         "cordova-plugin-whitelist": "1.2.2",
-        "cordova-plugin-file": "4.0.0",
-        "cordova-plugin-file-transfer": "1.6.3",
-        "cordova-plugin-file-opener2": "2.0.19"
+        "cordova-plugin-file": "4.0.0"
     }
 }
