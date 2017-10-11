@@ -29,53 +29,10 @@ $$(document).on('pageInit', function (e) {
 		}
 	});
 
-
-	$(".pdf").click(function(event) {
-		
-		openViewer('01/a.pdf');
-	});
 });
-var x;
-document.addEventListener('deviceready', function () {
-    // cordova.plugins.SitewaertsDocumentViewer is now available
-    x = cordova.plugins.SitewaertsDocumentViewer;
-    alert(x);
-}, false);
 
-var openViewer = function (url) {
-    SitewaertsDocumentViewer.viewDocument(
-        url,
-        'application/pdf',
-        {},
-        function () {
-            // shown
-            //window.console.log('document shown');
-        },
-        function () {
-            // closed
-            //window.console.log('document closed');
-        },
-        function (appId, installer) {
-            // missing app
-            if (confirm("Do you want to install the free PDF Viewer App "
-                    + appId + " for Android?")) {
-                installer(
-                    function () {
-                        //window.console.log('successfully installed app');
-                        if (confirm("App installed. Do you want to view the document now?"))
-                            viewDocument(url, mimeType, storage);
-                    },
-                    function (error) {
-                        //window.console.log('cannot install app');
-                        //window.console.log(error);
-                    }
-                );
-            }
-        },
-        function (error) {
-            alert(getString("error_pdfreader_notfound"));
-            //window.console.log('cannot view document ');
-            //window.console.log(error);
-        }
-    );
-};
+document.addEventListener('backbutton', function (e) {
+}
+
+
+
