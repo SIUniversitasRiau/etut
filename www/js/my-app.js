@@ -31,8 +31,6 @@ $$(document).on('pageInit', function (e) {
 
 });
 
-document.addEventListener('backbutton', function (e) {
-}
 
 
 
