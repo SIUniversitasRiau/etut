@@ -39,7 +39,7 @@
     <div class="panel panel-left panel-cover">
       <div class="content-block">
         <ul class="panel-content">
-            <li class="panel-link"><a href="index.html" class="close-panel"><img src="images/icons/white/home.png" alt="about">Home</a></li>
+            <li class="panel-link" id="homex"><a href="index.html" class="close-panel"><img src="images/icons/white/home.png" alt="about">Home</a></li>
      
             <li class="panel-link"><a href="materi.html" class="close-panel"><img src="images/content/materi.png" alt="about">Materi</a></li>
               <li class="panel-link"><a href="about.html" class="close-panel"><img src="images/icons/white/user.png" alt="about">Tentang Kami</a></li>
@@ -126,11 +126,13 @@ window.addEventListener('orientationchange', doOnOrientationChange);
 // Initial execution if needed
 doOnOrientationChange();
 document.addEventListener("backbutton", function(e){
+  $('#homex').click();
     if($.mobile.activePage.is('#homepage')){
         /* 
          Event preventDefault/stopPropagation not required as adding backbutton
           listener itself override the default behaviour. Refer below PhoneGap link.
         */
+
         e.preventDefault();
         //navigator.app.exitApp();
     }
